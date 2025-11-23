@@ -56,7 +56,9 @@ const MobileImg = styled.img`
 `;
 
 const DesktopImg = styled.div`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         display: none;
@@ -68,8 +70,7 @@ const HeroContainer = styled.div`
   padding: 64px 0;
   display: flex;
   justify-content: space-between;
-  gap: 0;
-
+  align-items: center;
   @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
@@ -78,14 +79,15 @@ const HeroContainer = styled.div`
 `;
 
 const Img = styled.img`
-  /* width: 304px; */
+  width: clamp(280px, 20vw + 50px, 100%);
+
 `;
 
 const HeroContent = styled.div`
   width: 448px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 24px;
   text-align: center;
 
   @media (max-width: 769px) {
