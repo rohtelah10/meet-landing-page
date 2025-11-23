@@ -16,19 +16,13 @@ Error generating stack: `+a.message+`
     height: 28px;
 `,Pa={colors:{"cyan-600":"#4d96a9","cyan-300":"#8fe3f9","purple-600":"#855fb1","purple-300":"#d9b8ff","slate-900":"#28283d","slate-600":"#87879d","slate-300":"#d1d1df",white:"#fafafa","hover-cyan":"#71c0d4","hover-purple":"#b18bdd"}},zs=({background:i,hoverBackground:s,children:o})=>{const[r,v]=tu.useState(!1),A=r?Pa.colors[s]:Pa.colors[i];return G.jsx("button",{style:{border:"none",borderRadius:"30px",padding:"16px 40px",backgroundColor:A,cursor:"pointer"},onMouseEnter:()=>v(!0),onMouseLeave:()=>v(!1),children:o})},M1=({children:i})=>G.jsxs("div",{style:{width:"56px",height:"136px",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"},children:[G.jsx("div",{style:{width:"1px",height:"80px",border:`1px dotted ${Pa.colors["slate-300"]}`}}),G.jsx("div",{style:{width:"50px",height:"50px",borderRadius:"50%",border:"1px dotted #000",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"white"},children:i})]}),vv=Dt.p`
   font-family: "Red Hat Display", sans-serif;
-  font-size: 64px;
+  /* font-size: 64px; */
+  font-size: clamp(40px, 3vw + 20px, 64px); 
   font-weight: 900;
   line-height: 110%;
   letter-spacing: 0px;
   color: ${({color:i,theme:s})=>i?s.colors[i]:s.colors["slate-900"]};
 
-  @media (max-width: 480px) {
-    font-size: 40px;
-  }
-
-  @media (min-width: 480px) and (max-width: 800px) {
-    font-size: 48px;
-  }
 `,D1=Dt.p`
   font-family: "Red Hat Display", sans-serif;
   font-size: 40px;
@@ -152,7 +146,9 @@ Error generating stack: `+a.message+`
         display: block;
     }
 `,t1=Dt.div`
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         display: none;
@@ -162,20 +158,20 @@ Error generating stack: `+a.message+`
   padding: 64px 0;
   display: flex;
   justify-content: space-between;
-  gap: 0;
-
+  align-items: center;
   @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
     gap: 72px;
   }
 `,l1=Dt.img`
-  /* width: 304px; */
+  width: clamp(280px, 20vw + 50px, 100%);
+
 `,Cv=Dt.div`
   width: 448px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 24px;
   text-align: center;
 
   @media (max-width: 769px) {
