@@ -80,16 +80,9 @@ const ImageContainer = styled.div`
 `;
 
 const Img = styled.img`
-  width: 256px;
+  width: clamp(148px, 20vw, 256px);
   border-radius: 8px;
 
-  @media (min-width: 480px) and (max-width: 769px) {
-    width: 152px;
-  }
-
-  @media (max-width: 480px) {
-    width: 148px;
-  }
 `;
 
 const TextContainer = styled.div`

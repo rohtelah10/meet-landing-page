@@ -13,19 +13,26 @@ import FooterImgMob from "../assets/mobile/image-footer.jpg";
 
 const Footer = () => {
   return (
-    <div style={{ position: "relative",  width: '100%', height: '100%', paddingTop: '110px', display: 'flex', justifyContent: 'center'}}>       
-      <div style={{ position: "absolute", top: "0"}}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        paddingTop: "110px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div style={{ position: "absolute", top: "0" }}>
         <NumberMarker>
           <TextPreset5 color="slate-600">02</TextPreset5>
         </NumberMarker>
       </div>
       <FooterContainer>
         <FooterContent>
-          {/* <div style={{ maxWidth: '45ch'}}> */}
-          <div style={{textAlign: 'center'}}>
+          <div>
             <TextPreset2 color="white">Experience more together</TextPreset2>
           </div>
-          {/* </div> */}
           <Text>
             <TextPreset4 color="white">
               Stay connected with reliable HD meetings and unlimited one-on-one
@@ -50,51 +57,42 @@ export default Footer;
 
 const FooterContainer = styled.div`
   width: 100%;
-  padding: 112px 80px;
+  padding: 112px clamp(20px, 5vw, 80px);
   background-image: linear-gradient(
       rgba(0 120 150 / 0.6),
       rgba(0 120 150 / 0.6)
     ),
-    linear-gradient(
-      rgba(255 255 255 / 0.6),
-      rgba(255 255 255 / 0.6)
-    ),
+    linear-gradient(rgba(255 255 255 / 0.6), rgba(255 255 255 / 0.6)),
     url(${FooterImg});
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: 480px) and (max-width: 769px) {
     padding: 64px 32px;
+    text-align: center;
 
     background-image: linear-gradient(
-      rgba(0 120 150 / 0.6),
-      rgba(0 120 150 / 0.6)
-    ),
-    
-    linear-gradient(
-      rgba(255 255 255 / 0.6),
-      rgba(255 255 255 / 0.6)
-    ),
-    url(${FooterImgTab});
-  background-repeat: no-repeat;
-  background-size: cover;
+        rgba(0 120 150 / 0.6),
+        rgba(0 120 150 / 0.6)
+      ),
+      linear-gradient(rgba(255 255 255 / 0.6), rgba(255 255 255 / 0.6)),
+      url(${FooterImgTab});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @media (max-width: 480px) {
     padding: 64px 32px;
+    text-align: center;
 
     background-image: linear-gradient(
-      rgba(0 120 150 / 0.6),
-      rgba(0 120 150 / 0.6)
-    ),
-    
-    linear-gradient(
-      rgba(255 255 255 / 0.6),
-      rgba(255 255 255 / 0.6)
-    ),
-    url(${FooterImgMob});
-  background-repeat: no-repeat;
-  background-size: cover;
+        rgba(0 120 150 / 0.6),
+        rgba(0 120 150 / 0.6)
+      ),
+      linear-gradient(rgba(255 255 255 / 0.6), rgba(255 255 255 / 0.6)),
+      url(${FooterImgMob});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 `;
 

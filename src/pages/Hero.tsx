@@ -18,11 +18,17 @@ export default function Hero() {
         <Img src={imgLeft} alt="Left Image"></Img>
       </DesktopImg>
       <HeroContent>
-        <TextPreset1>Group Chat for Everyone</TextPreset1>
-        <TextPreset4>
+        <div>
+
+        <TextPreset1 color="slate-900">Group Chat</TextPreset1>
+        <TextPreset1 color="slate-900">for Everyone</TextPreset1>
+        </div>
+
+        <TextPreset4 color="slate-600">
           Meet makes it easy to connect with others face-to-face virtually and
           collaborate across any device.
         </TextPreset4>
+    
         <Buttons>
           <Button background="cyan-600" hoverBackground="hover-cyan">
             {" "}
@@ -90,7 +96,7 @@ const HeroContent = styled.div`
   gap: 24px;
   text-align: center;
 
-  @media (max-width: 769px) {
+  @media (max-width: 480px) {
     gap: 24px;
     width: 100%;
     padding: 32px;
@@ -103,8 +109,8 @@ const Buttons = styled.div`
   justify-content: center;
   gap: 16px;
 
-
   @media (max-width: 480px) {
-    flex-direction: column;
+    flex-direction: column; 
+    align-items: center;
   }
 `;

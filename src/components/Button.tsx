@@ -26,6 +26,8 @@ const Button: React.FC<ButtonProps> = ({
         padding: "16px 40px",
         backgroundColor: currentBackgroundColor,
         cursor: "pointer",
+        display: "inline-block",
+        whiteSpace: "nowrap"
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
